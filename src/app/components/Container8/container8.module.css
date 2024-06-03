@@ -1,0 +1,202 @@
+.default {
+  --font-Roboto: "Roboto", sans-serif;
+  --containerPadding: 0 6.613756613756613vw;
+  --containerMarginTop: 9.920634920634921vw;
+  --backgroundContainerPadding: 6.510416666666667vw 9.765625vw;
+  --mobileContainerMarginTop: 16vw;
+  --mobileContainerPadding: 0 6.4vw;
+  --mobileBackgroundContainerPadding: 10.666666666666668vw 6.4vw;
+  --borderRadius: 0.6613756613756614vw;
+  --mobileBorderRadius: 2.666666666666667vw;
+  --padding100: 6.613756613756613vw;
+  --margin15: 0.992063492063492vw;
+  --margin20: 1.3227513227513228vw;
+  --margin30: 1.984126984126984vw;
+  --margin70: 4.62962962962963vw;
+  --margin100: 6.613756613756613vw;
+  --gap70: 4.62962962962963vw;
+  --gap20: 1.3227513227513228vw;
+  --gap30: 1.984126984126984vw;
+  --gap40: 2.6455026455026456vw;
+  --gap50: 3.3068783068783065vw;
+  --mainbgColor: #12171c;
+  --bgColor: #0c1117;
+  --font18: 1.1904761904761905vw;
+  --font24: 1.5873015873015872vw;
+  --font28: 1.8518518518518516vw;
+  --lineHeight18: 1.6666666666666667vw;
+  --lineHeight24: 2.2222222222222223vw;
+  --lineHeight28: 2.169973544973545vw;
+  --letterSpace18: 0.023809523809523808vw;
+  --letterSpace24: 0.015873015873015872vw;
+  --letterSpace28: 0.03703703703703704vw;
+  --mfont16: 4.266666666666667vw;
+  --mlineHeight16: 5.973333333333334vw;
+  --mletterSpace16: 0.08533333333333333vw;
+
+  --mfont12: 3.2vw;
+  --mlineHeight12: 4.4799999999999995vw;
+  --mletterSpace12: 0.4266666666666667vw;
+  --mfont14: 3.733333333333334vw;
+  --mlineHeight14: 5.226666666666667vw;
+  --mletterSpace14: 0.4266666666666667vw;
+
+  --mfont18: 4.8vw;
+  --mlineHeight18: 5.624vw;
+  --mletterSpace18: 0.4266666666666667vw;
+}
+
+.container7 {
+  margin-top: var(--containerMarginTop);
+  padding: var(--containerPadding);
+  margin-bottom: var(--containerMarginTop);
+}
+
+.faqContainer {
+  display: grid;
+  grid-template-columns: 86.77248677248677vw;
+}
+
+.title {
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--margin70);
+}
+
+.secondCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.faqDataCard {
+  
+  display: flex;
+  gap: 1.984126984126984vw;
+  padding: 1.984126984126984vw 0;
+  border-top: 0.06613756613756613vw solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.faqDataCard:last-child {
+  border-bottom: 0.06613756613756613vw solid rgba(255, 255, 255, 0.6);
+}
+
+.questionAnswerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: calc(1.984126984126984vw / 2);
+}
+
+.questionContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 107.2%;
+}
+
+.questionContainer h3 {
+  font-size: var(--font24);
+  line-height: var(--lineHeight24);
+  letter-spacing: var(--letterSpace24);
+  font-weight: 400;
+}
+
+.plusIcon {
+  width: 2.6455026455026456vw;
+  height: 2.6455026455026456vw;
+  margin-right: 1.0582010582010581vw;
+  position: relative;
+  cursor: pointer;
+  z-index: -1;
+
+}
+
+.plusIcon img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.answerContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.answerContainer p {
+  font-size: var(--font18);
+  line-height: var(--lineHeight18);
+  letter-spacing: var(--letterSpace18);
+  width: 81.01851851851852vw;
+}
+
+.answerContainer.visible {
+  max-height: 400px;
+}
+
+/* Container7 end */
+
+@media only screen and (max-width: 767px) {
+  /* container9 */
+
+  .container7 {
+    padding: var(--mobileContainerPadding);
+    margin-top: var(--mobileContainerMarginTop);
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8vw ;
+  }
+
+  .faqContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .firstCol {
+    display: flex;
+    justify-content: center;
+  }
+
+  .firstCol h2 {
+    width: 64vw !important;
+    text-align: center !important;
+  }
+
+  .faqDataCard {
+    padding: 4vw 0;
+    gap: 2.666666666666667vw;
+  }
+
+  .questionContainer{
+    width: 100%;
+  }
+
+  .questionContainer h3 {
+    font-size: var(--mfont16);
+    line-height: var(--mlineHeight16);
+    letter-spacing: var(--mletterSpace16);
+    font-weight: 400;
+  }
+
+  .plusIcon {
+    width: 6.666666666666667vw;
+    height: 6.666666666666667vw;
+    position: relative;
+  }
+
+  .plusIcon img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .answerContainer p {
+    font-size: var(--mfont12);
+    line-height: var(--mlineHeight12);
+    letter-spacing: var(--mletterSpace12);
+    width: 87.2vw;
+    margin-top: 2.666666666666667vw;
+  }
+}

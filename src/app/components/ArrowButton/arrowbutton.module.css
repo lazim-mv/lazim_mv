@@ -1,0 +1,54 @@
+.carouselButtonContainer {
+  display: flex;
+  gap: 1.3227513227513228vw;
+  justify-content: center;
+}
+
+.carouselButtonContainerLeft,
+.carouselButtonContainerRight {
+  width: 2.976190476190476vw;
+  height: 2.976190476190476vw;
+  background-color: transparent;
+  border: 0.06613756613756613vw solid white;
+  border-radius: 1.3227513227513228vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3.2552083333333335vw;
+  cursor: pointer;
+  transition: all .3s ease .1s;
+}
+
+.carouselButtonContainerLeft:hover,
+.carouselButtonContainerRight:hover {
+  background-color: #A0153E;
+  border: none;
+  transition: all .3s ease;
+}
+
+.arrow {
+  width: 0.7506613756613757vw;
+  height: 0.7506613756613757vw;
+  filter: brightness(1000%);
+}
+
+@media only screen and (max-width: 767px) {
+  .carouselButtonContainer {
+    gap: 4vw;
+    width: auto !important;
+  }
+
+  .carouselButtonContainerLeft,
+  .carouselButtonContainerRight {
+    width: 9.333333333333334vw;
+    height: 9.333333333333334vw;
+    border-radius: 9.333333333333334vw;
+  }
+
+  .arrow {
+    width: 2.666666666666667vw;
+    height: 2.666666666666667vw;
+    
+  }
+}

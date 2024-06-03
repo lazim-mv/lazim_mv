@@ -1,0 +1,321 @@
+.default {
+  --font-Roboto: "Roboto", sans-serif;
+  --containerPadding: 0 6.613756613756613vw;
+  --containerMarginTop: 9.920634920634921vw;
+  --backgroundContainerPadding: 6.510416666666667vw 9.765625vw;
+  --mobileContainerMarginTop: 16vw;
+  --mobileContainerPadding: 0 6.4vw;
+  --mobileBackgroundContainerPadding: 10.666666666666668vw 6.4vw;
+  --borderRadius: 0.6613756613756614vw;
+  --mobileBorderRadius: 2.666666666666667vw;
+  --padding100: 6.613756613756613vw;
+  --margin15: 0.992063492063492vw;
+  --margin20: 1.3227513227513228vw;
+  --margin30: 1.984126984126984vw;
+  --margin70: 4.62962962962963vw;
+  --margin100: 6.613756613756613vw;
+  --gap70: 4.62962962962963vw;
+  --gap20: 1.3227513227513228vw;
+  --gap30: 1.984126984126984vw;
+  --gap40: 2.6455026455026456vw;
+  --gap50: 3.3068783068783065vw;
+  --mainbgColor: #12171c;
+  --bgColor: #0c1117;
+  --font18: 1.1904761904761905vw;
+  --font24: 1.5873015873015872vw;
+  --font28: 1.8518518518518516vw;
+  --lineHeight18: 1.6666666666666667vw;
+  --lineHeight24: 2.2222222222222223vw;
+  --lineHeight28: 2.169973544973545vw;
+  --letterSpace18: 0.023809523809523808vw;
+  --letterSpace24: 0.015873015873015872vw;
+  --letterSpace28: 0.03703703703703704vw;
+  --mfont16: 4.266666666666667vw;
+  --mlineHeight16: 5.973333333333334vw;
+  --mletterSpace16: 0.08533333333333333vw;
+
+  --mfont12: 3.2vw;
+  --mlineHeight12: 4.4799999999999995vw;
+  --mletterSpace12: 0.4266666666666667vw;
+  --mfont14: 3.733333333333334vw;
+  --mlineHeight14: 5.226666666666667vw;
+  --mletterSpace14: 0.4266666666666667vw;
+
+  --mfont18: 4.8vw;
+  --mlineHeight18: 5.624vw;
+  --mletterSpace18: 0.4266666666666667vw;
+}
+
+.support {
+  position: fixed;
+  z-index: 10;
+  left: 1rem;
+  top: 1rem;
+  background: white;
+  color: black;
+  padding: 2rem;
+  border: 4px solid hsl(45 80% 50%);
+}
+
+@supports (animation-timeline: view()) {
+  .support {
+    display: none;
+  }
+}
+
+.videoContainer {
+  position: relative;
+}
+
+.section {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  view-timeline: --section;
+}
+
+/* .section:nth-of-type(1) {
+  height: 100vh;
+} */
+
+.section:nth-of-type(2) {
+  height: 100vh;
+}
+
+.h1 {
+  display: grid;
+}
+
+.h1 span:nth-child(1) {
+  font-size: 1.3227513227513228vw;
+  line-height: 1.8518518518518516vw;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.h1 span:nth-child(2) {
+  color: #fff;
+}
+
+.h1,
+.h2 {
+  text-align: center;
+  line-height: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  translate: -50% -50%;
+  width: 100%;
+}
+
+.h2 {
+  top: 40%;
+}
+
+.profileName {
+  margin-top: 1.3227513227513228vw;
+}
+
+.p {
+  position: fixed;
+  top: 54%;
+  left: 50%;
+  margin: 0;
+  translate: -50% -50%;
+  width: 50%;
+  text-align: center;
+  color: #fff;
+}
+
+@keyframes highlight {
+  50% {
+    opacity: 1;
+  }
+}
+
+.h1 span:first-of-type {
+  display: inline-block;
+  animation: fade-away both linear;
+  animation-timeline: --section;
+  animation-range: exit 20% exit 90%;
+}
+
+.h1 span:last-of-type {
+  display: inline-block;
+  animation: scale-up both cubic-bezier(0.1, 0.7, 0.9, 1.3),
+    fade-away both linear;
+  animation-timeline: --section;
+  animation-range: exit 0% exit 100%, exit 50% exit 90%;
+}
+
+@keyframes scale-up {
+  to {
+    scale: 1.5;
+  }
+}
+
+@keyframes imgAnimation {
+  0% {
+    scale: 0;
+    transform: translateY(100vh);
+    margin-top: 4vw;
+    filter: brightness(1);
+  }
+  100% {
+    scale: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes imgAnimationMob {
+  0% {
+    scale: 0;
+    transform: translateY(100vh);
+    filter: brightness(1);
+  }
+  100% {
+    scale: 1;
+    transform: translateY(0px);
+  }
+}
+
+.section__content {
+  height: 100%;
+}
+
+.videoContainer video {
+  position: fixed;
+  z-index: -111;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  translate: -50% -50%;
+  width: 86.7724867725vw;
+  height: 100vh;
+  filter: brightness(0.4);
+}
+
+.h2 {
+  animation: grow both ease-in, fade-away both linear;
+  animation-timeline: --section;
+  animation-range: exit-crossing -10% exit-crossing 10%, exit 0% exit 50%;
+}
+
+.p {
+  animation: grow both ease-in, fade-away both linear;
+  animation-timeline: --section;
+  animation-range: exit-crossing -10% exit-crossing 10%, exit 0% exit 50%;
+}
+
+.section__content .videoContainer video {
+  animation: imgAnimation;
+  /* animation-timeline: --section;
+  animation-range: exit-crossing -10% exit-crossing 10%, exit 0% exit 50%; */
+  animation-timeline: view();
+  animation-range: entry exit;
+}
+
+@keyframes grow {
+  0% {
+    scale: 0.5;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-away {
+  100% {
+    opacity: 0;
+  }
+}
+
+.h2 {
+  text-align: center;
+}
+
+.section__content {
+  width: 800px;
+  max-width: 100vw;
+  padding: 0 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .mainContainer {
+    padding: var(--mobileContainerPadding);
+    display: none;
+  }
+
+  .section__content {
+    animation: none;
+    width: 100vw;
+  }
+
+  .section {
+    min-height: 50vh;
+  }
+
+  .h2 {
+    animation: grow both ease-in, fade-away both linear;
+    animation-timeline: --section;
+    animation-range: exit-crossing 0% exit-crossing 0%, exit 20% exit 50%;
+  }
+
+  .p {
+    animation: grow both ease-in, fade-away both linear;
+    animation-timeline: --section;
+    animation-range: exit-crossing 0% exit-crossing 0%, exit 20% exit 50%;
+  }
+
+  .h1,
+  .h2 {
+    position: relative;
+    top: 110%;
+    left: 44%;
+  }
+
+  .h1 span {
+    animation: none;
+  }
+
+  .h1 span:nth-child(1) {
+    font-size: 5vw;
+    text-align: center;
+    line-height: normal;
+  }
+  .h1 span:nth-child(2) {
+    min-width: fit-content;
+    margin: 5vw auto;
+    font-size: 15vw;
+    text-align: center;
+    animation: none;
+  }
+
+  .h2 {
+    top: 105%;
+    font-size: 8vw;
+  }
+
+  .p {
+    position: absolute;
+    width: 87vw;
+    top: 74%;
+    left: 50%;
+    font-size: 5vw;
+    line-height: 1.2;
+  }
+
+  .section__content .videoContainer video {
+    animation: imgAnimationMob;
+  }
+
+  .videoContainer {
+    overflow: hidden;
+  }
+
+  .videoContainer video {
+    height: 90vh;
+    width: 100vw;
+    object-fit: cover;
+    translate: -50% -42%;
+  }
+}

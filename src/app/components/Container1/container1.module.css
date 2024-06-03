@@ -1,0 +1,111 @@
+.default {
+  --font-Roboto: "Roboto", sans-serif;
+  --containerPadding: 0 6.613756613756613vw;
+  --containerMarginTop: 9.920634920634921vw;
+  --backgroundContainerPadding: 6.510416666666667vw 9.765625vw;
+  --mobileContainerMarginTop: 16vw;
+  --mobileContainerPadding: 0 6.4vw;
+  --mobileBackgroundContainerPadding: 10.666666666666668vw 6.4vw;
+  --borderRadius: 0.6613756613756614vw;
+  --mobileBorderRadius: 2.666666666666667vw;
+  --padding100: 6.613756613756613vw;
+  --margin100: 6.613756613756613vw;
+  --margin20: 1.3227513227513228vw;
+  --margin30: 1.984126984126984vw;
+  --margin70: 4.62962962962963vw;
+  --gap70: 4.62962962962963vw;
+  --gap20: 1.3227513227513228vw;
+  --gap40: 2.6455026455026456vw;
+  --mainbgColor: #12171c;
+  --bgColor: #0c1117;
+  --font18: 1.1904761904761905vw;
+  --font24: 1.5873015873015872vw;
+  --lineHeight18: 1.6666666666666667vw;
+  --lineHeight24: 2.2222222222222223vw;
+  --mfont16: 4.266666666666667vw;
+  --mlineHeight16: 5.973333333333334vw;
+  --mletterSpace16: 0.021164021164021166vw;
+}
+
+.container {
+  padding: var(--containerPadding);
+  margin-top: var(--containerMarginTop);
+}
+
+.container p {
+  font-size: var(--font24);
+  line-height: var(--lineHeight24);
+}
+
+.aboutImg {
+  width: 100%;
+  height: 39.682539682539684vw;
+}
+
+.descContainer {
+  margin-top: 6.613756613756613vw;
+  width: 66.13756613756614vw;
+}
+
+.descContainer .span1 {
+  color: rgba(255, 255, 255, 0.6);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 1)
+  );
+  animation: textSrollReveal linear forwards;
+  animation-timeline: view();
+  animation-range: 10vh 50vh;
+}
+
+.descContainer .span2 {
+  color: rgba(255, 255, 255, 0.6);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 1)
+  );
+  animation: textSrollReveal linear forwards;
+  animation-timeline: view();
+  animation-range: 50vh 80vh;
+}
+
+@keyframes textSrollReveal {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: var(--mobileContainerPadding);
+    margin-top: var(--mobileContainerMarginTop);
+  }
+
+  .container p {
+    font-size: var(--mfont16);
+    line-height: var(--mlineHeight16);
+    width: auto !important;
+  }
+
+  .descContainer {
+    margin-top: 5.333333333333334vw;
+    width: auto;
+  }
+
+  /* .container p:nth-child(1){
+    margin: 5.333333333333334vw 0 0 0 !important;
+  } */
+
+  .aboutImg {
+    height: 106.66666666666667vw;
+    object-fit: cover;
+  }
+}

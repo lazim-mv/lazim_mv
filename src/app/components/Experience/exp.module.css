@@ -1,0 +1,167 @@
+.default {
+  --font-Roboto: "Roboto", sans-serif;
+  --containerPadding: 0 6.613756613756613vw;
+  --containerMarginTop: 9.920634920634921vw;
+  --backgroundContainerPadding: 6.510416666666667vw 9.765625vw;
+  --mobileContainerMarginTop: 16vw;
+  --mobileContainerPadding: 0 6.4vw;
+  --mobileBackgroundContainerPadding: 10.666666666666668vw 6.4vw;
+  --borderRadius: 0.6613756613756614vw;
+  --mobileBorderRadius: 2.666666666666667vw;
+  --padding100: 6.613756613756613vw;
+  --margin15: 0.992063492063492vw;
+  --margin20: 1.3227513227513228vw;
+  --margin30: 1.984126984126984vw;
+  --margin70: 4.62962962962963vw;
+  --margin100: 6.613756613756613vw;
+  --gap70: 4.62962962962963vw;
+  --gap20: 1.3227513227513228vw;
+  --gap30: 1.984126984126984vw;
+  --gap40: 2.6455026455026456vw;
+  --gap50: 3.3068783068783065vw;
+  --mainbgColor: #12171c;
+  --bgColor: #0c1117;
+  --font18: 1.1904761904761905vw;
+  --font24: 1.5873015873015872vw;
+  --font28: 1.8518518518518516vw;
+  --lineHeight18: 1.6666666666666667vw;
+  --lineHeight24: 2.2222222222222223vw;
+  --lineHeight28: 2.169973544973545vw;
+  --letterSpace18: 0.023809523809523808vw;
+  --letterSpace24: 0.015873015873015872vw;
+  --letterSpace28: 0.03703703703703704vw;
+  --mfont16: 4.266666666666667vw;
+  --mlineHeight16: 5.973333333333334vw;
+  --mletterSpace16: 0.08533333333333333vw;
+
+  --mfont12: 3.2vw;
+  --mlineHeight12: 4.4799999999999995vw;
+  --mletterSpace12: 0.4266666666666667vw;
+  --mfont14: 3.733333333333334vw;
+  --mlineHeight14: 5.226666666666667vw;
+  --mletterSpace14: 0.4266666666666667vw;
+
+  --mfont18: 4.8vw;
+  --mlineHeight18: 5.624vw;
+  --mletterSpace18: 0.4266666666666667vw;
+}
+
+.expContainer {
+  display: flex;
+  flex-direction: column;
+  padding: var(--containerPadding);
+  padding-top: 9.920634920634921vw;
+  padding-bottom: 9.920634920634921vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.expTextContainer {
+  text-align: center;
+}
+
+.row{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 3.7037037037037033vw;
+}
+
+.col{
+  display: flex;
+  gap: 40px;
+}
+
+.workPhilosophyHeading {
+  font-weight: bold;
+  font-size: 2.6455026455026456vw;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.expHeadingText {
+  font-size: 4.9vw;
+  margin-top: 3.7037037037037033vw;
+  font-weight: bolder;
+}
+
+.expDecText {
+  font-size: 1.3756613756613756vw;
+  margin-top: 1.3756613756613756vw;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem; /* Equivalent to gap-28 */
+  margin-top: 3.5rem; /* Equivalent to mt-14 */
+}
+
+.logoContainer img {
+  filter: grayscale(1);
+  transition: filter .4s ease-in;
+}
+
+.logoContainer img:hover{
+  filter: grayscale(0);
+  transition: filter .4s ease-out;
+}
+
+.logoContainer .nexwave {
+  width: 25.330687830687832vw;
+  height: 3.505291005291005vw;
+}
+
+.logoContainer .procube {
+  width: 25.330687830687832vw;
+  height: 6.349206349206349vw;
+}
+
+.logoContainer .m2hLogo {
+  width: 6.613756613756613vw;
+  height: 6.613756613756613vw;
+}
+
+@media only screen and (max-width: 767px) {
+  .expContainer {
+    padding: var(--mobileContainerPadding);
+    margin-top: var(--mobileContainerMarginTop);
+  }
+
+  .expHeadingText {
+    font-size: 10.5vw;
+    letter-spacing: 0.2px;
+    line-height: normal;
+    font-weight: 800;
+  }
+
+  .expDecText {
+    font-size: 6.4vw;
+    letter-spacing: normal;
+    padding: 0 5px !important;
+    line-height: normal;
+    width: 87.5vw;
+  }
+
+  .logoContainer {
+    width: 100%;
+    gap: 1.5vw;
+    margin: 3.5rem auto 0 auto;
+  }
+
+  .logoContainer .nexwave {
+    width: 32vw;
+    height: 4.4159999999999995vw;
+  }
+
+  .logoContainer .procube {
+    width: 32vw;
+    height: 7.349333vw;
+  }
+
+  .logoContainer .m2hLogo {
+    width: 18.2vw;
+    height: 16vw;
+    object-fit: contain;
+  }
+}

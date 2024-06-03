@@ -1,0 +1,108 @@
+.mHeader {
+  display: none;
+}
+
+.active {
+  color: #A0153E !important;
+}
+
+.hContainer {
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the total width */
+  height: 6.283068783068783vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-style: initial;
+  padding: var(--containerPadding);
+  position: relative;
+}
+
+.hContainer hr {
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 0.06613756613756613vw;
+  width: 86.77248677248677vw;
+  border: none;
+
+  position: absolute;
+  bottom: 0;
+  left: 6.613756613756613vw;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.logoContainer img {
+  width: 11.904761904761903vw;
+  height: 2.976190476190476vw;
+}
+
+.hMenuContainer {
+  display: flex;
+  align-items: center;
+  gap: 3.968253968253968vw;
+}
+
+.hUlList {
+  display: flex;
+  gap: 2.6455026455026456vw;
+  font-size: 1.1904761904761905vw;
+  font-weight: 400;
+  line-height: 1.6666666666666667vw;
+  color: #fff;
+  font-family: var(--font-Roboto);
+  text-transform: capitalize;
+  position: relative;
+  white-space: nowrap;
+}
+
+.hUlList a:hover {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.hUlList li {
+  cursor: pointer;
+}
+
+/* Header Anim or Transi Start */
+
+.huListTransitionWrapper {
+  /* width: 100%; */
+  height: 90%;
+  overflow: hidden;
+  position: relative;
+}
+
+.listHoverTop,
+.listBottomHover {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-0%, -0%);
+  transition: transform 0.6s ease;
+}
+
+.listHoverTop {
+  transform: translate(0%, -0%);
+}
+
+.listHoverBottom {
+  transition: transform 0.6s ease;
+  transform: translate(0%, 250%);
+}
+
+.huListTransitionWrapper:hover .listHoverTop {
+  transform: translate(0%, -250%);
+}
+
+.huListTransitionWrapper:hover .listHoverBottom {
+  transform: translate(0%, 0%);
+}
+
+@media only screen and (max-width: 767px) {
+  .hContainer {
+    display: none;
+  }
+}

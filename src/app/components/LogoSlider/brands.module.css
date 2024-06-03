@@ -1,0 +1,60 @@
+.default {
+  --font-Roboto: "Roboto", sans-serif;
+  --containerPadding: 0 6.613756613756613vw;
+  --containerMarginTop: 9.920634920634921vw;
+  --backgroundContainerPadding: 6.510416666666667vw 9.765625vw;
+  --mobileContainerMarginTop: 16vw;
+  --mobileContainerPadding: 0 6.4vw;
+  --mobileBackgroundContainerPadding: 10.666666666666668vw 6.4vw;
+  --borderRadius: 0.6613756613756614vw;
+  --mobileBorderRadius: 2.666666666666667vw;
+  --margin100: 6.613756613756613vw;
+  --margin20: 1.3227513227513228vw;
+  --margin30: 1.984126984126984vw;
+}
+
+.clientsImgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: var(--margin100);
+}
+
+.scrollingLogos {
+  display: flex;
+  align-items: center;
+  position: relative;
+  white-space: nowrap;
+  gap: var(--gap70);
+}
+
+.scrollingLogos img {
+  height: 3.968253968253968vw !important;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  .clientsImgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 16vw;
+  }
+
+  .scrollingLogos {
+    display: flex;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    gap: 8vw;
+  }
+
+  .scrollingLogos img {
+    height: 10.666666666666668vw!important;
+    object-fit: cover;
+  }
+}
+
+

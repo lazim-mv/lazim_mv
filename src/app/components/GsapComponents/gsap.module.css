@@ -1,0 +1,26 @@
+.expHeadingText {
+  font-size: 7.9vw;
+  margin-top: 3.7037037037037033vw;
+  font-weight: bolder;
+}
+
+.expDecText {
+  font-size: 1.3756613756613756vw;
+  margin-top: 1.3756613756613756vw;
+}
+
+@media only screen and (max-width: 767px) {
+  .expHeadingText {
+    font-size: 10.5vw;
+    letter-spacing: 0.2px;
+    line-height: normal;
+    font-weight: 800;
+  }
+  .expDecText {
+    font-size: 6.4vw;
+    letter-spacing: normal;
+    padding: 0 5px !important;
+    line-height: normal;
+    width: 87.5vw;
+  }
+}

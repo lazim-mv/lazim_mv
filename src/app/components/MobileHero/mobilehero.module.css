@@ -1,0 +1,35 @@
+.container {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: calc(21.3333vw );
+    height: 65vh;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 13vw;
+    letter-spacing: 0;
+    line-height: normal;
+    font-weight: 800;
+  }
+
+  .description {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  .name {
+    font-size: 14vw;
+    letter-spacing: 0;
+    line-height: normal;
+    font-weight: 800;
+  }
+}

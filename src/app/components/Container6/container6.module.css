@@ -1,0 +1,191 @@
+.default {
+  --font-Roboto: "Roboto", sans-serif;
+  --containerPadding: 0 6.613756613756613vw;
+  --containerMarginTop: 9.920634920634921vw;
+  --backgroundContainerPadding: 6.510416666666667vw 9.765625vw;
+  --mobileContainerMarginTop: 16vw;
+  --mobileContainerPadding: 0 6.4vw;
+  --mobileBackgroundContainerPadding: 10.666666666666668vw 6.4vw;
+  --borderRadius: 0.6613756613756614vw;
+  --mobileBorderRadius: 2.666666666666667vw;
+  --padding100: 6.613756613756613vw;
+  --margin15: 0.992063492063492vw;
+  --margin20: 1.3227513227513228vw;
+  --margin30: 1.984126984126984vw;
+  --margin70: 4.62962962962963vw;
+  --margin100: 6.613756613756613vw;
+  --gap70: 4.62962962962963vw;
+  --gap20: 1.3227513227513228vw;
+  --gap30: 1.984126984126984vw;
+  --gap40: 2.6455026455026456vw;
+  --gap50: 3.3068783068783065vw;
+  --mainbgColor: #12171c;
+  --bgColor: #0c1117;
+  --font18: 1.1904761904761905vw;
+  --font24: 1.5873015873015872vw;
+  --font28: 1.8518518518518516vw;
+  --lineHeight18: 1.6666666666666667vw;
+  --lineHeight24: 2.2222222222222223vw;
+  --lineHeight28: 2.169973544973545vw;
+  --letterSpace18: 0.023809523809523808vw;
+  --letterSpace24: 0.015873015873015872vw;
+  --letterSpace28: 0.03703703703703704vw;
+  --mfont16: 4.266666666666667vw;
+  --mlineHeight16: 5.973333333333334vw;
+  --mletterSpace16: 0.08533333333333333vw;
+
+  --mfont12: 3.2vw;
+  --mlineHeight12: 4.4799999999999995vw;
+  --mletterSpace12: 0.4266666666666667vw;
+  --mfont14: 3.733333333333334vw;
+  --mlineHeight14: 5.226666666666667vw;
+  --mletterSpace14: 0.4266666666666667vw;
+
+  --mfont18: 4.8vw;
+  --mlineHeight18: 5.624vw;
+  --mletterSpace18: 0.4266666666666667vw;
+}
+
+.container {
+  padding: var(--margin100);
+  padding-bottom: 0;
+  background: var(--bgColor);
+  display: grid;
+  grid-template-columns: 41.4021164021164vw 41.4021164021164vw;
+  gap: var(--gap30);
+  position: relative;
+  top: 0;
+}
+
+.left {
+  position: sticky;
+  top: 6.613756613756613vw;
+  height: 100vh;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap50);
+  /* height: calc(191.7989417989418vw + 80.359788vw); */
+  height: calc(191.7989417989418vw + 42.359788vw);
+}
+
+.cards .android {
+  animation: fade-outt linear forwards;
+}
+
+.card {
+  padding: var(--gap50);
+  transform: scale(1);
+  background: var(--mainbgColor);
+  animation-timeline: view();
+  animation-range: 75% 100%;
+}
+
+.cards .iosDeviceClass {
+  animation: none !important;
+  transform: scale(1) !important;
+}
+
+.imageContainer {
+  width: 34.78835978835979vw;
+  /* height: 26.455026455026452vw; */
+  height: 20vw;
+  margin-bottom: var(--margin30);
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* transform: scale(1); */
+  /* animation: fade-out linear forwards;
+  animation-timeline: view();
+  animation-range: cover 60% cover 80%; */
+  /* transition: all .8s ease; */
+}
+
+/* @keyframes fade-out {
+  100% {
+    transform: scale(0.85);
+  }
+} */
+
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 10.666666666666668vw 6.4vw;
+    background: var(--bgColor);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap30);
+    position: relative;
+    top: 0;
+  }
+
+  .left {
+    position: relative;
+    top: 0;
+    height: auto;
+  }
+
+  .left h2 {
+    text-align: left;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8vw;
+    margin-top: 5.333333333333334vw;
+    height: auto;
+  }
+
+  .card {
+    padding: 4vw;
+    background: var(--mainbgColor);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    animation-range: 60% 100%;
+  }
+
+  .card h2 {
+    padding: 0 0 4vw 0 !important;
+  }
+
+  .imageContainer {
+    width: 79.2vw;
+    height: 66.66666666666666vw;
+    margin-bottom: 4vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card h3 {
+    padding: 0 0 2.666666666666667vw 0 !important;
+  }
+
+  .card p {
+    font-size: var(--mfont12);
+    line-height: var(--mlineHeight12);
+    letter-spacing: var(--mletterSpace12);
+  }
+}
+
+@keyframes img_key {
+  0% {
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes fade-outt {
+  100% {
+    transform: scale(0.8);
+  }
+}
