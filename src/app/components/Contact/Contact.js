@@ -11,7 +11,7 @@ const Contact = ({ page }) => {
           <div className={styles.innerContainer}>
             <h6 className={styles.sectionName}>CONTACT</h6>
             <div className={styles.title}>
-              <h1>Have An Idea? Let's Make It Happen.</h1>
+              <h1>Have An Idea? Let&apos;s Make It Happen.</h1>
 
               <BtnComponent
                 buttonText="Get In Touch"
