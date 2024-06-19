@@ -40,7 +40,8 @@ function Header() {
       <div className={`${styles.hContainer} ${styles.bgWhite}`}>
         <a href="/">
           <div className={styles.logoContainer}>
-            <h3 className={styles.logo}>Lazim Latheef</h3>
+            <Image width={595} height={107} src="/hLogo.svg" alt="hlogo" />
+            {/* <h3 className={`${styles.logo} noto`}>Lazim Latheef</h3> */}
           </div>
         </a>
         <div className={styles.hMenuContainer}>
@@ -58,7 +59,7 @@ function Header() {
                       pathname !== null &&
                       pathname !== "" &&
                       pathname === item.href
-                        ? styles.active
+                        ? styles.activee
                         : ""
                     }`}
                     onClick={() =>
@@ -71,17 +72,16 @@ function Header() {
               ))}
             </ul>
           </div>
-          <a onClick={handleDownloadResume}>
-            <BtnComponent
-              buttonText="Resume"
-              borderColor="rgba(255, 255, 255, 0.6)"
-              bg="transparent"
-              color="#fff"
-              arrow="none"
-            />
-          </a>
         </div>
-        <hr />
+        <a onClick={handleDownloadResume}>
+          <BtnComponent
+            buttonText="Resume"
+            borderColor="rgba(255, 255, 255, 0.6)"
+            bg="transparent"
+            color="#fff"
+            arrow="none"
+          />
+        </a>
       </div>
     </>
   );

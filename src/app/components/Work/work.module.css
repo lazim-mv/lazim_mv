@@ -1,0 +1,63 @@
+.workPhilosophy {
+  display: flex;
+  flex-direction: column;
+  padding: var(--containerPadding);
+  padding-top: 9.920634920634921vw;
+  padding-bottom: 9.920634920634921vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textEffect {
+  position: relative;
+}
+
+.workPhilosophyHeading {
+  /* Your styles for workPhilosophyHeading */
+}
+
+.workPhilosophyDesc {
+  /* Your styles for workPhilosophyDesc */
+}
+
+.workMobilePhilosophyDesc {
+  /* Your styles for workMobilePhilosophyDesc */
+}
+
+.workDescContainer {
+  /* Your styles for workDescContainer */
+}
+
+.text {
+  color: rgba(242, 240, 240, 0.2);
+  background: linear-gradient(to right, #b6b6b6, #ffffff) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-size cubic-bezier(0.1, 0.5, 0.5, 1) 0.5s;
+}
+
+.expHeadingText span {
+  font-size: 7.9vw;
+  margin-top: 3.7037037037037033vw;
+  font-weight: bolder;
+}
+
+.effect3 {
+  height: 3.3068783068783065vw;
+  position: relative;
+  margin-top: 5vw;
+}
+
+.text3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  overflow: hidden;
+  line-height: normal;
+}
+
+.text3 span {
+  display: inline-block;
+  color: white;
+}

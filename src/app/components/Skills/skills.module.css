@@ -66,7 +66,11 @@
   height: 26.455026455026452vw;
   line-height: 26.455026455026452vw;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-image: radial-gradient(
+    circle farthest-corner at 50% 50%,
+    #0f0c25,
+    #000
+  );
   margin: 0 auto;
   position: relative;
   cursor: pointer;
@@ -82,9 +86,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.7rem;
-  font-family: "bFont";
-  color: #fff;
+  font-size: 1.3227513227513228vw;
+  width: 87.5%;
+  text-wrap: pretty;
 }
 
 .mobileSkillsText {
@@ -127,7 +131,7 @@
   height: 3.6375661375661372vw;
   line-height: 2.976190476190476vw;
   border-radius: 50%;
-  border: 1px solid #172554;
+  border: 0.06613756613756613vw solid #172554;
   position: absolute;
   font-size: 59%;
   color: white;
@@ -244,8 +248,8 @@
   }
 
   .skillCircle {
-    width: 220px;
-    height: 220px;
+    width: 58.666666666666664vw;
+    height: 58.666666666666664vw;
     background-image: radial-gradient(
       circle farthest-corner at 50% 50%,
       #0f0c25,
@@ -254,8 +258,10 @@
   }
 
   .skillsText {
-    color: white;
-    font-size: 1.6rem;
+    font-size: 4.8vw;
+    font-size: 2.2vw;
+    width: 87.5%;
+    padding: 2vw;
   }
 
   .mobileSkillsText {
@@ -264,23 +270,20 @@
     top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.7rem;
-    font-family: "bFont";
-    color: white;
     display: none;
   }
 
   .skillsIcon {
-    top: 75px;
-    left: 75px;
+    top: 20vw;
+    left: 20vw;
     line-height: normals;
   }
 
   .skillsIcon li .fab {
-    margin: 80px;
-    width: 40px;
-    height: 40px;
-    padding: 5px !important;
+    margin: 21.333333333333336vw;
+    width: 10.666666666666668vw;
+    height: 10.666666666666668vw;
+    padding: 1.3333333333333335vw !important;
     text-align: center;
   }
 }

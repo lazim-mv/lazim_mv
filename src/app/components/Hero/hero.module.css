@@ -46,6 +46,10 @@
   --mletterSpace18: 0.4266666666666667vw;
 }
 
+.mainContainer {
+  height: 250vh;
+}
+
 .support {
   position: fixed;
   z-index: 10;
@@ -115,6 +119,8 @@
 
 .profileName {
   margin-top: 1.3227513227513228vw;
+  font-size: 5.235449735449736vw;
+  font-weight: 700 !important;
 }
 
 .p {
@@ -243,6 +249,7 @@
   .mainContainer {
     padding: var(--mobileContainerPadding);
     display: none;
+    height: 100vh;
   }
 
   .section__content {

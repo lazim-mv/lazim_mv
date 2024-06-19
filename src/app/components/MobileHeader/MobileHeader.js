@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./mobileHeader.module.css";
 import { BtnComponent } from "../ButtonComponent";
 import { useLenis } from "@studio-freight/react-lenis";
+import gsap from "gsap";
 
 function MobileHeader() {
   const pathname = usePathname();
@@ -31,6 +32,55 @@ function MobileHeader() {
     setIsMenuOpen(false);
   });
 
+  const svgRef = useRef(null);
+
+  useEffect(() => {
+    const svgElement = svgRef.current;
+    const menuToggle = gsap.timeline({ paused: true, reversed: true });
+
+    menuToggle
+      .set({}, { className: "-=closemenu" })
+      .set({}, { className: "+=openmenu" })
+      .to(
+        ".top",
+        { duration: 0.2, y: "-9px", transformOrigin: "50% 50%" },
+        "burg"
+      )
+      .to(
+        ".bot",
+        { duration: 0.2, y: "9px", transformOrigin: "50% 50%" },
+        "burg"
+      )
+      .to(
+        ".mid",
+        { duration: 0.2, scale: 0.1, transformOrigin: "50% 50%" },
+        "burg"
+      )
+      .add("rotate")
+      .to(".top", { duration: 0.2, y: "5" }, "rotate")
+      .to(".bot", { duration: 0.2, y: "-5" }, "rotate")
+      .to(
+        ".top",
+        { duration: 0.2, rotationZ: 45, transformOrigin: "50% 50%" },
+        "rotate"
+      )
+      .to(
+        ".bot",
+        { duration: 0.2, rotationZ: -45, transformOrigin: "50% 50%" },
+        "rotate"
+      );
+
+    const handleClick = () => {
+      menuToggle.reversed() ? menuToggle.restart() : menuToggle.reverse();
+    };
+
+    svgElement.addEventListener("click", handleClick);
+
+    return () => {
+      svgElement.removeEventListener("click", handleClick);
+    };
+  }, []);
+
   return (
     <div
       className={styles.mHeader}
@@ -53,86 +103,87 @@ function MobileHeader() {
           justifyContent: "space-between",
           alignItems: "center",
           height: "100%",
-          borderBottom: "0.26666666666666666vw solid rgba(255,255,255,0.6)",
         }}
       >
         <a href="/">
           <div>
-            <h3 className={styles.logo}>
-              Lazim <br /> Latheef
-            </h3>
+            <div
+              className={styles.logo}
+              style={{ zIndex: "9999999999", position: "relative" }}
+            >
+              <Image width={595} height={107} src="/hLogo.svg" alt="hlogo" />
+            </div>
           </div>
         </a>
+
         <div
-          aria-label="HamburgerMenu"
+          className={styles.hamAni}
           onClick={toggleMenu}
-          className={`${styles.bars} ${isMenuOpen ? styles.open : ""}`}
-          style={{ position: "relative", display: "flex", border: "none" }}
+          style={{ zIndex: "9999999999" }}
         >
-          <span className={`bar ${styles.bar}`}></span>
-          <span className={`bar ${styles.bar}`}></span>
-          <span className={`bar ${styles.bar}`}></span>
+          <svg
+            ref={svgRef}
+            id="burger"
+            width="30"
+            class="openmenu"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 30 30"
+          >
+            <path class="top" d="M0 9h30v2H0z" fill="white" />
+            <line
+              class="mid"
+              x1="0"
+              y1="15"
+              x2="30"
+              y2="15"
+              stroke="white"
+              stroke-width="2"
+              vector-effect="non-scaling-stroke"
+            />
+            <path class="bot" d="M0 19h30v2H0z" fill="white" />
+          </svg>
         </div>
+
         <div
-          className={styles.openMenu}
+          className={`hMenu ${styles.hMenu}`}
           style={{
-            position: "fixed",
-            top: "21.333333333333336vw",
-            right: 0,
-            width: "100vw",
-            height: isMenuOpen ? "auto" : "0vh",
-            backgroundColor: "#12171c",
-            zIndex: 52,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            padding: "24px",
-            gap: "10px",
-            opacity: isMenuOpen ? 1 : 0,
-            transition: "opacity 0.4s ease",
+            height: isMenuOpen ? "100vh" : 0,
+            opacity: isMenuOpen ? "1" : 0,
+            transform: isMenuOpen ? "translateY(0)" : "translateY(-4.8vw)",
+            transition:
+              "transform 800ms ease 0s, height 800ms ease 0s, opacity 800ms ease 0s",
           }}
         >
-          <div
-            className={`hMenu ${styles.hMenu}`}
-            style={{
-              height: isMenuOpen ? "auto" : 0,
-              transform: isMenuOpen ? "translateY(0)" : "translateY(-4.8vw)",
-              transition: "transform 0.4s ease, height 0.1s ease",
-            }}
-          >
-            {menuList.map((item, index) => (
-              <a
-                key={index}
-                className={`linksWrapper linksText ${
-                  pathname !== undefined &&
-                  pathname !== null &&
-                  pathname !== "" &&
-                  pathname === item.href
-                    ? "active"
-                    : ""
-                } ${styles.linksWrapper} ${styles.linksText}`}
-                href={item.href}
-                style={{
-                  transform: isMenuOpen
-                    ? "translateY(0)"
-                    : "translateY(-100vw)",
-                }}
-                onClick={() => lenis.scrollTo(`${item.href}`, { lerp: 0.05 })}
-              >
-                {item.text}
-              </a>
-            ))}
-
-            <a href="/" style={{ display: isMenuOpen ? "block" : "none" }}>
-              <BtnComponent
-                buttonText="Get in Touch"
-                header={true}
-                bg="#A0153E"
-                arrow={true}
-                color="#ffffff"
-              />
+          {menuList.map((item, index) => (
+            <a
+              key={index}
+              className={`linksWrapper linksText ${
+                pathname !== undefined &&
+                pathname !== null &&
+                pathname !== "" &&
+                pathname === item.href
+                  ? "active"
+                  : ""
+              } ${styles.linksWrapper} ${styles.linksText}`}
+              href={item.href}
+              style={{
+                transform: isMenuOpen ? "translateY(0)" : "translateY(-100vw)",
+              }}
+              onClick={() => lenis.scrollTo(`${item.href}`, { lerp: 0.05 })}
+            >
+              {item.text}
             </a>
-          </div>
+          ))}
+
+          <a href="/" style={{ display: isMenuOpen ? "block" : "none" }}>
+            <BtnComponent
+              buttonText="Get in Touch"
+              header={true}
+              bg="#A0153E"
+              arrow={true}
+              color="#ffffff"
+            />
+          </a>
         </div>
       </div>
     </div>

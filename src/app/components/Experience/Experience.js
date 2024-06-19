@@ -13,6 +13,45 @@ function Experience() {
   const [isVisible, setIsVisible] = useState(false);
   const [width, height] = useWindowSize();
 
+  const [activeIndex, setActiveIndex] = useState(null);
+  const images = [
+    {
+      src: "/experience/nexwave1.png",
+      width: 383,
+      height: 55,
+      alt: "nexwave",
+      className: styles.nexwave,
+    },
+    {
+      src: "/experience/m2h.png",
+      width: 383,
+      height: 130,
+      alt: "m2h",
+      className: styles.m2hLogo,
+    },
+    {
+      src: "/experience/ProCube.png",
+      width: 383,
+      height: 130,
+      alt: "Procube",
+      className: styles.procube,
+    },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => {
+        let newIndex;
+        do {
+          newIndex = Math.floor(Math.random() * images.length);
+        } while (newIndex === prevIndex);
+        return newIndex;
+      });
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <>
       <div id="experience" className={styles.expContainer}>
@@ -34,7 +73,7 @@ function Experience() {
           </div> */}
           <TextAnimation hText="COMPANIES WHERE I HAVE WORKED" />
           <TextAnimation
-            pTExt="I have over 3 years of combined experience as a software developer
+            pTExt="I have over 3 years of combined   experience as a software developer
             and a freelance developer."
           />
           {/* <p className={styles.expDecText}>
@@ -43,39 +82,21 @@ function Experience() {
           </p> */}
         </div>
         <div className={styles.logoContainer}>
-          <div>
-            <Image
-              src="/experience/nexwave1.png"
-              width={383}
-              height={55}
-              alt="nexwave"
-              priority
-              unoptimized
-              className={styles.nexwave}
-            />
-          </div>
-          <div>
-            <Image
-              className={styles.m2hLogo}
-              src="/experience/m2h.png"
-              width={383}
-              height={130}
-              alt="m2h"
-              priority
-              unoptimized
-            />
-          </div>
-          <div>
-            <Image
-              src="/experience/ProCube.png"
-              width={383}
-              height={130}
-              alt="Procube"
-              priority
-              unoptimized
-              className={styles.procube}
-            />
-          </div>
+          {images.map((image, index) => (
+            <div key={index}>
+              <Image
+                src={image.src}
+                width={image.width}
+                height={image.height}
+                alt={image.alt}
+                priority
+                unoptimized
+                className={`${image.className} ${
+                  index === activeIndex ? styles.animateImage : ""
+                }`}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </>

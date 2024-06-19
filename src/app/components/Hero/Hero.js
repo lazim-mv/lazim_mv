@@ -50,14 +50,14 @@ const Hero = ({ speed = 1 }) => {
         <section className={styles.section}>
           <div className={styles.section__content}>
             <h1 className={styles.h1}>
-              <span>My Name is</span>
+              <span className="noto h1Span">I am</span>
               <span className={styles.profileName}>Mohammed Lazim Latheef</span>
             </h1>
           </div>
         </section>
         <section className={styles.section} id="about">
           <div className={styles.section__content}>
-            <h2 className={styles.h2}>A Software Developer</h2>
+            <h2 className={`${styles.h2} noto`}>A Software Developer</h2>
             <p className={styles.p}>
               Transforming ideas into stunning, functional digital solutions.
               With over 3 years of experience in web and mobile application
@@ -65,7 +65,7 @@ const Hero = ({ speed = 1 }) => {
               robust applications that drive business success. Let’s build
               something amazing together!
             </p>
-            <div className={styles.videoContainer}>
+            {/* <div className={styles.videoContainer}>
               <div className="videoWrapper">
                 <video
                   className="videoBackground pt-3"
@@ -79,7 +79,7 @@ const Hero = ({ speed = 1 }) => {
                   Your browser does not support the video tag.
                 </video>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="some" ref={triggerRef}></div>
         </section>

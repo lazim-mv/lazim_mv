@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Faster One
+- Font Author: Copyright 2012 The Faster Project Authors (https://github.com/etunni/faster), with Reserved Font Name 'Faster'
+- Font Source: https://fonts.gstatic.com/s/fasterone/v19/H4ciBXCHmdfClFb-vWhfyLuShq63czE.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

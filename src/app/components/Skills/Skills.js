@@ -55,7 +55,14 @@ function Skills() {
           <div className={styles.skillsContainer} id="skills">
             <div className={styles.skillCircle} ref={skillsRef}>
               <div className={styles.flexCol}>
-                <p className={styles.skillsText}>SKILLS&nbsp;AND&nbsp;TOOLS</p>
+                <p className={styles.skillsText}>
+                  These are some of the technologies I have used to create
+                  stunning websites and solutions. From structuring content with
+                  HTML5 and styling with CSS3, to bringing interactivity with
+                  JavaScript and Tailwind. I build powerful and responsive user
+                  interfaces using React, and robust back-end solutions with
+                  Node.js .
+                </p>
                 <p className={styles.mobileSkillsText}>TAP HERE</p>
               </div>
               <ul className={styles.skillsIcon}>

@@ -1,8 +1,9 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --font-Roboto: "Sora", sans-serif;
+  --font-Noto: "Noto Serif Display", serif;
   --containerPadding: 0 6.613756613756613vw;
   --containerMarginTop: 9.920634920634921vw;
   --backgroundContainerPadding: 6.510416666666667vw 9.765625vw;
@@ -130,8 +131,30 @@ p {
 }
 
 span {
-  color: #A0153E;
+  color: #083358;
   text-transform: capitalize;
+}
+
+.noto {
+  font-family: var(--font-Noto) !important;
+}
+
+.h1Span {
+  font-weight: 600;
+  color: white !important;
+  font-size: 2.8vw !important;
+}
+
+.videoBg {
+  position: relative;
+}
+
+.videoBg video {
+  width: 100vw;
+  height: 250vh;
+  position: absolute;
+  top: 0;
+  object-fit: cover;
 }
 
 .buttonText {
@@ -158,12 +181,12 @@ a {
 }
 
 .active h4 {
-  /* color: #A0153E; */
+  /* color: #083358; */
   font-weight: 400;
 }
 
 .active {
-  color: #A0153E;
+  color: #083358;
   font-weight: 400;
 }
 
@@ -201,7 +224,7 @@ a {
 .btnContainer::before {
   position: absolute;
   content: "";
-  background: #A0153E;
+  background: #083358;
   width: 33.06878306878307vw;
   height: 33.06878306878307vw;
   z-index: -1;
@@ -373,6 +396,13 @@ a {
 
   span {
     text-transform: capitalize;
+  }
+
+  .videoBg video {
+    width: 96vw;
+    height: 85vh;
+    left: 2vw;
+    top: -31vw;
   }
 
   .buttonText {

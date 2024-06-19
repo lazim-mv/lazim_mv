@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.grain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero h1 {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 400;
+  font-size: 100px;
+  color: #fff;
+  line-height: 100%;
+}
+
+.card.scroll {
+  position: relative;
+}
+
+.img,
+.iframeContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 1000px;
+  height: 500px;
+}
+
+.footer {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #434650;
+  margin-top: 150px;
+}
+
+.footer h1 {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}

@@ -1,63 +1,51 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "@studio-freight/lenis";
+import { useLenis } from "@studio-freight/react-lenis";
 import styles from "./gsap.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const TextAnimation = ({ hText, pTExt }) => {
-  useEffect(() => {
-    // Ensure the code only runs on the client
-    if (typeof window !== "undefined") {
-      const splitTypes = document.querySelectorAll(".reveal-type");
+const TextAnimation = ({ hText, pTExt, textAllign }) => {
+  const lenis = useLenis();
 
-      splitTypes.forEach((char) => {
-        const bg = char.dataset.bgColor;
-        const fg = char.dataset.fgColor;
-
-        // Debug logs
-        console.log("Element:", char);
-        console.log("Background color:", bg);
-        console.log("Foreground color:", fg);
-
-        const text = new SplitType(char, { types: "chars" });
-
-        console.log("Split text chars:", text.chars);
-
-        gsap.fromTo(
-          text.chars,
-          {
-            color: bg,
-          },
-          {
-            color: fg,
-            duration: 0.3,
-            stagger: 0.02,
-            scrollTrigger: {
-              trigger: char,
-              start: "top 80%",
-              end: "top 20%",
-              scrub: true,
-              markers: false,
-              toggleActions: "play play reverse reverse",
-            },
-          }
-        );
-      });
+  useLayoutEffect(() => {
+    if (lenis) {
+      lenis.on("scroll", ScrollTrigger.update);
     }
-  }, []);
+
+    const ctx1 = gsap.context(() => {
+      const textElements = document.querySelectorAll(`.${styles.text}`);
+      textElements.forEach((textElement) => {
+        ScrollTrigger.create({
+          trigger: textElement,
+          start: "top 95%",
+          end: "bottom 40%",
+          markers: false,
+          scrub: true,
+          animation: gsap.to(textElement, {
+            backgroundSize: "100%",
+            ease: "none",
+            delay: 1.5,
+          }),
+        });
+      });
+    });
+
+    return () => {
+      if (lenis) {
+        lenis.off("scroll", ScrollTrigger.update);
+      }
+      ctx1.revert();
+    };
+  }, [lenis]);
 
   return (
     <div>
-      <h6
-        className={`reveal-type ${styles.expHeadingText}`}
-        data-bg-color="rgba(255, 255, 255, 0.2)"
-        data-fg-color="#fff"
-      >
-        {hText}
+      <h6 className={styles.expHeadingText} style={{ textAlign: textAllign }}>
+        <span className={styles.text}>{hText}</span>
       </h6>
       <p
         className={`reveal-type ${styles.expDecText}`}

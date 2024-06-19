@@ -7,9 +7,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: calc(21.3333vw );
-    height: 65vh;
+    justify-content: flex-start;
+    margin-top: calc(21.333333333333336vw + 10.666666666666668vw);
+    height: 70vh;
     text-align: center;
   }
 
@@ -21,9 +21,13 @@
   }
 
   .description {
-    margin: 20px 0;
-    font-size: 18px;
+    margin: 5.333333333333334vw 0;
+    font-size: 5.5vw;
     line-height: normal;
+    width: 87.5vw;
+    font-weight: 400;
+    letter-spacing: 0.026455026455026457vw;
+    text-transform: math-auto;
   }
 
   .name {
