@@ -83,7 +83,7 @@ const Work = () => {
             I tried to write something useful here but nothing comes to my mind!
             I also hate the lorem ipsum and not going to use that. If you have
             something which you want me to add, please keep it for yourself as
-            it's my Pen! My Pen = My rules
+            it&lsquo;s my Pen! My Pen = My rules
           </h2>
         </div>
       </div>
