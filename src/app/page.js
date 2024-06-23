@@ -1,3 +1,4 @@
+"use client";
 import Contact from "./components/Contact/Contact";
 import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer/Footer";
@@ -8,8 +9,11 @@ import MobileHeader from "./components/MobileHeader/MobileHeader";
 import MobileHero from "./components/MobileHero/MobileHero";
 import Project from "./components/Projects/Project";
 import Skills from "./components/Skills/Skills";
+import AnimatedSections from "./components/Tests/Test";
 import TextAnimation from "./components/Tests/Test";
+import Test2 from "./components/Tests/Test2";
 import Work from "./components/Work/Work";
+import Work1 from "./components/Work/Work1";
 
 export default function Home() {
   return (
@@ -31,9 +35,11 @@ export default function Home() {
       </div>
       <MobileHero />
       <Experience />
-      <Work />
+
       <Skills />
-      <Project />
+      <Work1 />
+      <Test2 />
+
       <Contact />
       <Footer />
       {/* <BurnInText /> */}

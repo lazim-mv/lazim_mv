@@ -36,9 +36,9 @@ function Skills() {
       onEnter: () => {
         skillsElement.classList.add(styles.inView);
       },
-      onLeaveBack: () => {
-        skillsElement.classList.remove(styles.inView);
-      },
+      // onLeaveBack: () => {
+      //   skillsElement.classList.remove(styles.inView);
+      // },
     });
 
     // Clean up the ScrollTrigger instance

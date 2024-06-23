@@ -1,0 +1,120 @@
+.container {
+  padding: var(--containerPadding);
+  padding-top: 9.920634920634921vw;
+  /* padding-bottom: 9.920634920634921vw; */
+}
+
+.cards {
+  margin-top: 4.62962962962963vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3227513227513228vw;
+}
+
+.card {
+  transition: color 0.3s;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: width 0.6s, height 0.6s;
+}
+
+.keywordWrapper {
+  position: relative;
+  width: max-content;
+  height: max-content;
+}
+
+.zIndexCheck {
+  position: relative;
+}
+
+.keywords {
+  display: block;
+  font-size: 4.878306878306878vw;
+  line-height: normal;
+  text-align: center;
+  width: max-content;
+  height: max-content;
+  font-weight: 1000;
+  color: #fff;
+  transition: color 0.3s;
+  z-index: 3;
+  position: relative;
+}
+
+.notHovered .keywords {
+  position: relative;
+  color: #333;
+  z-index: -1;
+}
+
+.imgContainer {
+  position: absolute;
+  width: 0;
+  height: 0;
+
+  top: 50%;
+  left: 50%;
+  filter: blur(5px);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s, transform 0.6s, filter 0.6s ease 0.3s;
+}
+
+.keywordWrapper:hover .imgContainer1 {
+  width: calc(26.36904761904762vw / 1.2);
+  height: calc(36.11970899470899vw / 1.2);
+  filter: blur(0);
+  transform: translate(-55%, -50%) rotate(-17deg);
+  transition: width 0.6s, height 0.6s, transform 0.6s, filter 0.6s ease 0.3s;
+}
+
+.keywordWrapper:hover .imgContainer2 {
+  width: calc(8.766534391534393vw * 2.5);
+  height: calc(12.271825396825397vw * 2.5);
+  filter: blur(0);
+  transform: translate(-55%, -50%) rotate(17deg);
+  transition: width 0.6s, height 0.6s, transform 0.6s, filter 0.6s ease 0.3s;
+}
+
+.keywordWrapper:hover .imgContainer3 {
+  width: calc(11.461640211640214vw * 1.4);
+  height: calc(17.16931216931217vw * 1.4);
+  filter: blur(0);
+  transform: translate(-55%, -50%) rotate(-17deg);
+  transition: width 0.6s, height 0.6s, transform 0.6s, filter 0.6s ease 0.3s;
+}
+
+.keywordWrapper:hover .imgContainer4 {
+  width: calc(14.143518518518519vw * 1.3);
+  height: calc(21.21362433862434vw * 1.3);
+  filter: blur(0);
+  transform: translate(-55%, -50%) rotate(17deg);
+  transition: width 0.6s, height 0.6s, transform 0.6s, filter 0.6s ease 0.3s;
+}
+
+.keywordWrapper:hover .imgContainer5 {
+  width: calc(16.816137566137566vw * 1.2);
+  height: calc(23.68121693121693vw * 1.2);
+  filter: blur(0);
+  transform: translate(-55%, -50%) rotate(-17deg);
+  transition: width 0.6s, height 0.6s, transform 0.6s, filter 0.6s ease 0.3s;
+}
+
+.keywordWrapper:hover .imgContainer6 {
+  width: calc(13.412698412698413vw * 1.5);
+  height: calc(17.77777777777778vw * 1.5);
+  filter: blur(0);
+  transform: translate(-55%, -50%) rotate(17deg);
+  transition: width 0.6s, height 0.6s, transform 0.6s, filter 0.6s ease 0.3s;
+}
+
+.imgContainer img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}

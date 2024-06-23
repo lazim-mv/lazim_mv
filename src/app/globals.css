@@ -48,6 +48,12 @@
   --mfont18: 4.8vw;
   --mlineHeight18: 5.624vw;
   --mletterSpace18: 0.4266666666666667vw;
+
+  --bg-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
 }
 
 * {
@@ -60,6 +66,7 @@
 body {
   background-color: #000;
   scroll-behavior: smooth;
+  /* user-select: none; */
 }
 
 body::-webkit-scrollbar {
@@ -400,9 +407,9 @@ a {
 
   .videoBg video {
     width: 96vw;
-    height: 85vh;
+    height: 65vh;
     left: 2vw;
-    top: -31vw;
+    top: -10.666666666666668vw;
   }
 
   .buttonText {

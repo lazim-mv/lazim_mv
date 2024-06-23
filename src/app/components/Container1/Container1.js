@@ -13,8 +13,8 @@ const Container1 = () => {
   return (
     <div className={`${styles.container} `}>
       <Image
-        unoptimized
         src={isSmallScreen ? container1Data.mImg: container1Data.img}
+        unoptimized
         width={100}
         height={0}
         alt="ImageClients"

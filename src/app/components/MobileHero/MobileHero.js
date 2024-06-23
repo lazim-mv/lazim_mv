@@ -14,10 +14,10 @@ const MobileHero = () => {
         SOFTWARE DEVELOPER
       </h1> */}
       <BurnInText text1="SOFTWARE" text2="DEVELOPER" className={styles.heading} />
-      <p className={styles.description}>
+      {/* <p className={styles.description}>
         Discover a world of captivating design, curated with passion and
         precision.
-      </p>
+      </p> */}
       <BurnInText
         text1="Discover a world of captivating design, curated with passion and precision"
         // text2=""

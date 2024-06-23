@@ -50,7 +50,7 @@ const Hero = ({ speed = 1 }) => {
         <section className={styles.section}>
           <div className={styles.section__content}>
             <h1 className={styles.h1}>
-              <span className="noto h1Span">I am</span>
+              <span className="noto h1Span">I'm</span>
               <span className={styles.profileName}>Mohammed Lazim Latheef</span>
             </h1>
           </div>
