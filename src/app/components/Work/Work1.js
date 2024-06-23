@@ -8,22 +8,10 @@ const Work1 = () => {
 
   const workData = [
     {
-      keyWord: "Innovation",
+      keyWord: "Adaptability",
       phrase:
-        "I constantly seek out new and better ways to solve problems and improve our processes, ensuring that innovation is at the heart of everything I do",
-      img: "/work/innovation1.jpg",
-    },
-    {
-      keyWord: "Collaboration",
-      phrase:
-        "I believe that the best results come from working together, leveraging diverse skills and perspectives to achieve common goals.",
-      img: "/work/collaboration.jpg",
-    },
-    {
-      keyWord: "Integrity",
-      phrase:
-        "My actions are guided by a strong sense of ethics and honesty, building trust with clients and partners through transparency and accountability.",
-      img: "/work/integrity.jpg",
+        "In a rapidly changing world, I stay agile and flexible, ready to pivot and embrace new challenges and opportunities with a proactive mindset.",
+      img: "/work/Adaptability.jpg",
     },
     {
       keyWord: "Excellence",
@@ -32,16 +20,29 @@ const Work1 = () => {
       img: "/work/excellence.jpg",
     },
     {
-      keyWord: "Adaptability",
+      keyWord: "Innovation",
       phrase:
-        "In a rapidly changing world, I stay agile and flexible, ready to pivot and embrace new challenges and opportunities with a proactive mindset.",
-      img: "/work/Adaptability.jpg",
+        "I constantly seek out new and better ways to solve problems and improve our processes, ensuring that innovation is at the heart of everything I do",
+      img: "/work/innovation1.jpg",
+    },
+
+    {
+      keyWord: "Credibility",
+      phrase:
+        "My actions are guided by a strong sense of ethics and honesty, building trust with clients and partners through transparency and accountability.",
+      img: "/work/integrity.jpg",
     },
     {
       keyWord: "Resilience",
       phrase:
         "I face challenges head-on with determination and perseverance, bouncing back stronger from setbacks and continuously moving forward.",
       img: "/work/resilience.jpg",
+    },
+    {
+      keyWord: "Cooperation",
+      phrase:
+        "I believe that the best results come from working together, leveraging diverse skills and perspectives to achieve common goals.",
+      img: "/work/collaboration.jpg",
     },
   ];
 
@@ -87,4 +88,4 @@ const Work1 = () => {
 
 export default Work1;
 
-// 
+//
