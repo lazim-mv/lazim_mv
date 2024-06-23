@@ -11,7 +11,7 @@ const Work1 = () => {
       keyWord: "Adaptability",
       phrase:
         "In a rapidly changing world, I stay agile and flexible, ready to pivot and embrace new challenges and opportunities with a proactive mindset.",
-      img: "/work/Adaptability.jpg",
+      img: "/work/adaptability.jpg",
     },
     {
       keyWord: "Excellence",
