@@ -4,7 +4,12 @@ import Image from "next/image";
 import { SectionName } from "../ButtonComponent";
 import { gsap } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowsToEye, faClose, faForward, faLink } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowsToEye,
+  faClose,
+  faForward,
+  faLink,
+} from "@fortawesome/free-solid-svg-icons";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -136,6 +141,9 @@ const Test2 = () => {
         {link && (
           <div className={styles.iframeView}>
             <div className={styles.iframeViewWrap}>
+              <div className={styles.iframeContent}>
+                <h1>Beacon Dubai</h1>
+              </div>
               <div className={styles.iconContainer} onClick={handleClose}>
                 <FontAwesomeIcon
                   icon={faClose}

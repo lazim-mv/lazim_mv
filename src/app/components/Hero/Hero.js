@@ -57,7 +57,9 @@ const Hero = ({ speed = 1 }) => {
         </section>
         <section className={styles.section} id="about">
           <div className={styles.section__content}>
-            <h2 className={`${styles.h2} noto`}>A Software Developer</h2>
+            <h2 className={`${styles.h2} ${styles.profileName} `}>
+              A Software Developer
+            </h2>
             <p className={styles.p}>
               Transforming ideas into stunning, functional digital solutions.
               With over 3 years of experience in web and mobile application

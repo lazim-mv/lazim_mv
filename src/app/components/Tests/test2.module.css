@@ -53,6 +53,8 @@
   padding-bottom: 9.920634920634921vw;
   padding-right: 1.3227513227513228vw;
   padding-left: 1.3227513227513228vw;
+  padding-right: 6.613756613756613vw;
+  padding-left: 6.613756613756613vw;
   position: relative;
 }
 
@@ -74,7 +76,7 @@
   display: flex;
   flex-direction: column;
   /* width: 30.29100529100529vw; */
-  width: 30%;
+  width: 29%;
   height: max-content;
   opacity: 0;
   position: relative;
@@ -184,7 +186,7 @@
   bottom: 14vw;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: white;
   display: flex;
   justify-content: center;
@@ -192,13 +194,26 @@
   display: flex;
   flex-direction: column;
   z-index: 3;
-  /* padding: 2vw 5% 0 5%; */
+  padding-right: 6.613756613756613vw;
+  padding-left: 6.613756613756613vw;
 }
 
 .iframeViewWrap {
   position: relative;
   width: 100vw;
   height: 100%;
+  padding-right: 6.613756613756613vw;
+  padding-left: 6.613756613756613vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  padding-top: 2vw;
+}
+
+.iframeContent h1 {
+  color: black;
+  text-align: center;
+  margin: 2vw;
+  display: none;
 }
 
 .iconContainer {
@@ -231,4 +246,6 @@
   margin: auto;
   width: 100%;
   height: 100%;
+  box-shadow: 0.26455026455026454vw 0.5291005291005291vw 1.2566137566137565vw -0.1984126984126984vw
+    rgba(0, 0, 0, 0.8);
 }
