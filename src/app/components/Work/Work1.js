@@ -78,6 +78,9 @@ const Work1 = () => {
               <div className={styles.zIndexCheck}>
                 <h5 className={styles.keywords}>{data.keyWord}</h5>
               </div>
+              <div className={styles.phrases}>
+                <p>{data.phrase}</p>
+              </div>
             </div>
           </div>
         ))}

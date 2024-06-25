@@ -420,6 +420,18 @@ a {
     margin-right: 1.3333333333333335vw !important;
   }
 
+  /* .animatedH1 {
+    font-size: 7rem;
+    text-transform: uppercase;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 5.9rem;
+  }
+
+  .char {
+    transform: translateY(115px);
+    transition: transform 0.5s;
+  } */
+
   .btnContainer {
     /* width: 34.66666666666667vw !important; */
     height: 9.866666666666667vw !important;

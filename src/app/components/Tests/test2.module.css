@@ -249,3 +249,55 @@
   box-shadow: 0.26455026455026454vw 0.5291005291005291vw 1.2566137566137565vw -0.1984126984126984vw
     rgba(0, 0, 0, 0.8);
 }
+
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: var(--mobileContainerPadding);
+    margin: 16vw 0;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 8vw;
+  }
+
+  .card {
+    width: 100%;
+    height: max-content;
+    background-color: #12171c;
+    padding: 2vw 0;
+  }
+
+  .iframeView {
+    height: 80vh;
+    bottom: 20vh;
+  }
+
+  .content{
+    display: none;
+  }
+
+  .iconContainer {
+    bottom: auto;
+    right: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(200%, -50%);
+
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .iconContainer:nth-child(2){
+    top: 75%;
+  }
+
+  .redirectLink {
+    right: auto;
+    top: 85%;
+  }
+
+  .icon {
+    font-size: 5vw;
+  }
+}

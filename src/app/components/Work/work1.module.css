@@ -132,3 +132,43 @@
   height: 100% !important;
   object-fit: cover;
 }
+
+.phrases {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: var(--mobileContainerPadding);
+    margin: 16vw 0;
+  }
+
+  .cards {
+    gap: 8vw;
+  }
+
+  .keywords {
+    font-size: 11vw;
+    font-weight: 700;
+  }
+
+  .imgContainer {
+    display: none;
+  }
+
+  .card {
+  }
+
+  .card:hover {
+    background: #12121c;
+    padding: 6vw 4vw;
+    padding-right: 6vw;
+    height: max-content;
+    border-radius: 1.5vw;
+  }
+
+  .card:hover .phrases {
+    display: flex;
+    margin-top: 2vw;
+  }
+}

@@ -20,6 +20,22 @@
     font-weight: 800;
   }
 
+  /* .animatedH1 {
+    font-size: 7rem;
+    text-transform: uppercase;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 5.9rem;
+    overflow: hidden;
+    color: #fff !important;
+  }
+
+  .char {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    color: #fff;
+  } */
+
   .description {
     margin: 5.333333333333334vw 0;
     font-size: 5.5vw;
