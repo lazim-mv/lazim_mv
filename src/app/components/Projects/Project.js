@@ -79,10 +79,8 @@ const Project = () => {
   });
 
   const handleFullView = (index) => {
-    
-      setClickedIndex(index);
-      console.log("Clicked");
-    
+    setClickedIndex(index);
+    console.log("Clicked");
   };
 
   const handleClose = (e) => {

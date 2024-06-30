@@ -70,8 +70,8 @@ const Work1 = () => {
                 <Image
                   src={data.img}
                   unoptimized
-                  width={100}
-                  height={0}
+                  width={457}
+                  height={540}
                   alt="ImageClients"
                 />
               </div>

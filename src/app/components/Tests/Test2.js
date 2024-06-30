@@ -22,6 +22,7 @@ const Test2 = () => {
       desc: "NEXWAVE IS A comprehensive WEBSITE THAT OFFERS services, including digital strategy, development, marketing, and designing",
       link: "https://www.nexwavedigital.com/",
       showLink: true,
+      category: "office",
     },
     {
       img: "/project/2.png",
@@ -29,6 +30,7 @@ const Test2 = () => {
       desc: "Beacon is a Management Consultants THAT OFFERS services including Business Incorporation, Financial & Accounting, Services Audit & Taxation",
       link: "https://uae.bmcglobal.co/pages/WhyDubai/",
       showLink: true,
+      category: "office",
     },
     {
       img: "/project/5.png",
@@ -36,6 +38,7 @@ const Test2 = () => {
       desc: "Beacon is a Management Consultants THAT OFFERS services including Business Incorporation, Financial & Accounting, Services Audit & Taxation",
       link: "https://www.riyashakkim.com/",
       showLink: true,
+      category: "office",
     },
     {
       img: "/project/4.png",
@@ -43,6 +46,7 @@ const Test2 = () => {
       desc: "NEXWAVE IS A comprehensive WEBSITE THAT OFFERS services, including digital strategy, development, marketing, and designing",
       link: "https://www.loopifysubs.com/",
       showLink: true,
+      category: "office",
     },
     {
       img: "/project/3.png",
@@ -50,6 +54,7 @@ const Test2 = () => {
       desc: "Beacon is a Management Consultants THAT OFFERS services including Business Incorporation, Financial & Accounting, Services Audit & Taxation",
       link: "https://ksa.bmcglobal.co/pages/WhySaudi/",
       showLink: true,
+      category: "office",
     },
     {
       img: "/project/6.png",
@@ -57,10 +62,52 @@ const Test2 = () => {
       desc: "Beacon is a Management Consultants THAT OFFERS services including Business Incorporation, Financial & Accounting, Services Audit & Taxation",
       link: "https://bright-line.vercel.app/",
       showLink: true,
+      category: "office",
+    },
+    {
+      img: "/project/7.png",
+      title: "Ecommerse",
+      desc: "",
+      link: "https://ecommerce-client-self.vercel.app/",
+      showLink: true,
+      category: "learning",
+    },
+    {
+      img: "/appImages/kithr.png",
+      title: "Office Kit HR",
+      desc: "",
+      showLink: false,
+      category: "office",
+      background: "#ed1f41",
+    },
+    {
+      img: "/appImages/Demostore/demostore.png",
+      title: "Ecommerce App",
+      desc: "",
+      showLink: false,
+      category: "learning",
+      background: "#ffa230",
+    },
+    {
+      img: "/appImages/Quran/Quran.png",
+      title: "Quran Translation App",
+      desc: "",
+      showLink: false,
+      category: "learning",
+      background: "#199c69",
+    },
+    {
+      img: "/appImages/studentApp/studentApp.png",
+      title: "Student App",
+      desc: "",
+      showLink: false,
+      category: "learning",
+      background: "#8f113b",
     },
   ];
 
   const [link, setLink] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("learning");
 
   useEffect(() => {
     if (link) {
@@ -98,7 +145,7 @@ const Test2 = () => {
         once: true,
       },
     });
-  }, []);
+  }, [selectedCategory]);
 
   function handleIframeView(data) {
     setLink(data);
@@ -107,6 +154,14 @@ const Test2 = () => {
   function handleClose() {
     setLink("");
   }
+
+  function handleCategoryChange(category) {
+    setSelectedCategory(category);
+  }
+
+  const filteredProjects = projectData.filter(
+    (project) => project.category === selectedCategory
+  );
 
   return (
     <>
@@ -119,18 +174,52 @@ const Test2 = () => {
           all devices. Experience the perfect blend of aesthetic appeal and
           user-friendly functionality.
         </p>
+        <div className={`${styles.categoryButtonContainer} `}>
+          <div
+            className={`${styles.categoryProjecct} ${
+              selectedCategory === "learning" ? styles.selectedCategory : ""
+            }`}
+            onClick={() => handleCategoryChange("learning")}
+          >
+            Personal Projects
+          </div>
+          <div
+            className={`${styles.categoryProjecct} ${
+              selectedCategory === "office" ? styles.selectedCategory : ""
+            }`}
+            onClick={() => handleCategoryChange("office")}
+          >
+            Professional Projects
+          </div>
+        </div>
         <div className={styles.cards}>
-          {projectData.map((data, index) => (
+          {filteredProjects.map((data, index) => (
             <div
               className={styles.card}
               key={index}
               onClick={(e) => handleIframeView(data.link)}
             >
               <div className={styles.imgContainer}>
-                <iframe src={data.link} frameBorder="0"></iframe>
-                <div className={styles.previewButton}>
-                  <h5>Preview</h5>
-                </div>
+                {data.showLink ? (
+                  <iframe src={data.link} frameBorder="0"></iframe>
+                ) : (
+                  <div className={styles.realImgContainer}>
+                    <Image
+                      src={data.img}
+                      alt="image"
+                      width={383}
+                      height={343}
+                      style={{
+                        background: data.background && data.background,
+                      }}
+                    />
+                  </div>
+                )}
+                {data.showLink && (
+                  <div className={styles.previewButton}>
+                    <h5>Preview</h5>
+                  </div>
+                )}
               </div>
               <div className={styles.content}>
                 <h5>{data.title}</h5>
