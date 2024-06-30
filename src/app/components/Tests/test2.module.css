@@ -339,4 +339,39 @@
   .icon {
     font-size: 5vw;
   }
+
+  .realImgContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .realImgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .categoryButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2vw;
+    margin-top: 4.62962962962963vw;
+  }
+
+  .categoryProjecct {
+    border: 0.07936507936507936vw solid white;
+    border-radius: 3.6375661375661372vw;
+    padding: 1.992063492063492vw 2.6455026455026456vw 1.992063492063492vw
+      2.6455026455026456vw;
+    cursor: none;
+
+    font-size: 4vw;
+  }
+
+  .selectedCategory {
+    border: none;
+  }
 }
