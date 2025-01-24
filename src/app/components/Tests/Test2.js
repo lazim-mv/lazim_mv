@@ -26,9 +26,9 @@ const Test2 = () => {
     },
     {
       img: "/project/2.png",
-      title: "BEACON Dubai",
+      title: "Pullysons",
       desc: "Beacon is a Management Consultants THAT OFFERS services including Business Incorporation, Financial & Accounting, Services Audit & Taxation",
-      link: "https://uae.bmcglobal.co/pages/WhyDubai/",
+      link: "https://pullys.vercel.app/",
       showLink: true,
       category: "office",
     },
@@ -50,9 +50,9 @@ const Test2 = () => {
     },
     {
       img: "/project/3.png",
-      title: "BEACON Saudi",
-      desc: "Beacon is a Management Consultants THAT OFFERS services including Business Incorporation, Financial & Accounting, Services Audit & Taxation",
-      link: "https://ksa.bmcglobal.co/pages/WhySaudi/",
+      title: "ERP Dashboard",
+      desc: "An ERP system for a steel manufacturing company designed to optimize operations and workflows. Built using Next.js, Ant Design, Axios, and integrated backend systems with webhooks and APIs, it features a robust BOM module for material and assembly management. Middleware ensured secure authentication and role-based access, while real-time updates enhanced communication. The solution reduced downtime, improved resource management, and delivered a scalable, industry-specific platform with a modern, responsive interface.",
+      link: "https:erp.procube.cx",
       showLink: true,
       category: "office",
     },
@@ -107,7 +107,7 @@ const Test2 = () => {
   ];
 
   const [link, setLink] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("learning");
+  const [selectedCategory, setSelectedCategory] = useState("office");
 
   useEffect(() => {
     if (link) {
@@ -165,7 +165,7 @@ const Test2 = () => {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className={styles.container} id="project">
         <div className={styles.forScroll}></div>
         <SectionName sectionText="Project" textAllign="center" />
         <p className={`${styles.projectDesc} gs_reveal`}>
@@ -176,17 +176,15 @@ const Test2 = () => {
         </p>
         <div className={`${styles.categoryButtonContainer} `}>
           <div
-            className={`${styles.categoryProjecct} ${
-              selectedCategory === "learning" ? styles.selectedCategory : ""
-            }`}
+            className={`${styles.categoryProjecct} ${selectedCategory === "learning" ? styles.selectedCategory : ""
+              }`}
             onClick={() => handleCategoryChange("learning")}
           >
             Personal Projects
           </div>
           <div
-            className={`${styles.categoryProjecct} ${
-              selectedCategory === "office" ? styles.selectedCategory : ""
-            }`}
+            className={`${styles.categoryProjecct} ${selectedCategory === "office" ? styles.selectedCategory : ""
+              }`}
             onClick={() => handleCategoryChange("office")}
           >
             Professional Projects
