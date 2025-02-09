@@ -52,7 +52,7 @@ const Test2 = () => {
       img: "/project/3.png",
       title: "ERP Dashboard",
       desc: "An ERP system for a steel manufacturing company designed to optimize operations and workflows. Built using Next.js, Ant Design, Axios, and integrated backend systems with webhooks and APIs, it features a robust BOM module for material and assembly management. Middleware ensured secure authentication and role-based access, while real-time updates enhanced communication. The solution reduced downtime, improved resource management, and delivered a scalable, industry-specific platform with a modern, responsive interface.",
-      link: "https:erp.procube.cx",
+      link: "https://erp.procube.cx/dashboard",
       showLink: true,
       category: "office",
     },

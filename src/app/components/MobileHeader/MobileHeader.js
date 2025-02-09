@@ -125,22 +125,22 @@ function MobileHeader() {
             ref={svgRef}
             id="burger"
             width="30"
-            class="openmenu"
+            className="openmenu"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 30 30"
           >
-            <path class="top" d="M0 9h30v2H0z" fill="white" />
+            <path className="top" d="M0 9h30v2H0z" fill="white" />
             <line
-              class="mid"
+              className="mid"
               x1="0"
               y1="15"
               x2="30"
               y2="15"
               stroke="white"
-              stroke-width="2"
-              vector-effect="non-scaling-stroke"
+              strokeWidth="2"
+              vectorEffect="non-scaling-stroke"
             />
-            <path class="bot" d="M0 19h30v2H0z" fill="white" />
+            <path className="bot" d="M0 19h30v2H0z" fill="white" />
           </svg>
         </div>
 
@@ -157,14 +157,13 @@ function MobileHeader() {
           {menuList.map((item, index) => (
             <a
               key={index}
-              className={`linksWrapper linksText ${
-                pathname !== undefined &&
-                pathname !== null &&
-                pathname !== "" &&
-                pathname === item.href
+              className={`linksWrapper linksText ${pathname !== undefined &&
+                  pathname !== null &&
+                  pathname !== "" &&
+                  pathname === item.href
                   ? "active"
                   : ""
-              } ${styles.linksWrapper} ${styles.linksText}`}
+                } ${styles.linksWrapper} ${styles.linksText}`}
               href={item.href}
               style={{
                 transform: isMenuOpen ? "translateY(0)" : "translateY(-100vw)",
