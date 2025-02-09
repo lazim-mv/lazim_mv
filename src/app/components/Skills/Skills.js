@@ -27,32 +27,38 @@ function Skills() {
 
   useEffect(() => {
     const skillsElement = skillsRef.current;
-    console.log(skillsElement, "skillele");
 
-    ScrollTrigger.create({
+    const trigger = ScrollTrigger.create({
       trigger: skillsElement,
       start: "top 80%",
-      end: "bottom 20%",
+      end: "bottom 10%",
       onEnter: () => {
         skillsElement.classList.add(styles.inView);
       },
-      // onLeaveBack: () => {
-      //   skillsElement.classList.remove(styles.inView);
-      // },
+      onLeave: () => {
+        skillsElement.classList.remove(styles.inView);
+      },
+      onEnterBack: () => {
+        skillsElement.classList.add(styles.inView);
+      },
+      onLeaveBack: () => {
+        skillsElement.classList.remove(styles.inView);
+      }
     });
 
-    // Clean up the ScrollTrigger instance
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      trigger.kill();
     };
   }, []);
+
 
   return (
     <>
       <RevealAffect>
-        <div className={styles.skillsMainContainer}>
+        <div className={styles.skillsMainContainer} >
+          <div id="skills" style={{ marginTop: "-3.3068783068783065vw", position: "absolute" }}></div>
           <SectionName sectionText="Skills And Tools" textAllign="center" />
-          <div className={styles.skillsContainer} id="skills">
+          <div className={styles.skillsContainer} >
             <div className={styles.skillCircle} ref={skillsRef}>
               <div className={styles.flexCol}>
                 <p className={styles.skillsText}>

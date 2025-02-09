@@ -165,9 +165,9 @@ const Test2 = () => {
 
   return (
     <>
-      <div className={styles.container} id="project">
-        <div className={styles.forScroll}></div>
-        <SectionName sectionText="Project" textAllign="center" />
+      <div className={styles.container}>
+        <div className={styles.forScroll} id="project"></div>
+        <SectionName sectionText="Recent Projects" textAllign="center" />
         <p className={`${styles.projectDesc} gs_reveal`}>
           Our expertly crafted website seamlessly combines stunning web design
           and intuitive user experience, ensuring optimal responsiveness across

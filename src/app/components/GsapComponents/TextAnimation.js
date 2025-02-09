@@ -22,7 +22,8 @@ const TextAnimation = ({ hText, pTExt, textAllign }) => {
         ScrollTrigger.create({
           trigger: textElement,
           start: "top 95%",
-          end: "bottom 40%",
+          // end: "bottom 40%",
+          end: "bottom 60%",
           markers: false,
           scrub: true,
           animation: gsap.to(textElement, {

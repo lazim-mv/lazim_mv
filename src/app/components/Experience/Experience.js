@@ -54,8 +54,8 @@ function Experience() {
 
   return (
     <>
-      <div id="experience" className={styles.expContainer}>
-        <div className={styles.expTextContainer}>
+      <div className={styles.expContainer}>
+        <div className={styles.expTextContainer} id="experience">
           {/* <h5 className={styles.workPhilosophyHeading}>EXPERIENCE</h5> */}
           <SectionName sectionText="EXPERIENCE" />
           {/* <h1 className={styles.expHeadingText}>
@@ -91,9 +91,8 @@ function Experience() {
                 alt={image.alt}
                 priority
                 unoptimized
-                className={`${image.className} ${
-                  index === activeIndex ? styles.animateImage : ""
-                }`}
+                className={`${image.className} ${index === activeIndex ? styles.animateImage : ""
+                  }`}
               />
             </div>
           ))}

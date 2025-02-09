@@ -51,6 +51,7 @@
   padding: var(--mobileContainerPadding);
   padding-top: 9.920634920634921vw;
   padding-bottom: 9.920634920634921vw;
+  position: relative;
 }
 
 .skillsContainer {
