@@ -12,6 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" type="image/png" />
+      </head>
       <body className={inter.className}><SmoothScrolling>{children}</SmoothScrolling></body>
     </html>
   );

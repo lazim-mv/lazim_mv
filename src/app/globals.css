@@ -138,7 +138,7 @@ p {
 }
 
 span {
-  color: #083358;
+  color: #a0153e;
   text-transform: capitalize;
 }
 
@@ -193,7 +193,7 @@ a {
 }
 
 .active {
-  color: #083358;
+  color: #a0153e;
   font-weight: 400;
 }
 
@@ -231,7 +231,7 @@ a {
 .btnContainer::before {
   position: absolute;
   content: "";
-  background: #083358;
+  background: #a0153e;
   width: 33.06878306878307vw;
   height: 33.06878306878307vw;
   z-index: -1;
