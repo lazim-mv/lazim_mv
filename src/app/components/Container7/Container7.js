@@ -19,8 +19,6 @@ const Container7 = ({ header, blogPage }) => {
       try {
         const data = await fetchDataAndExport();
         setBlogData(data);
-
-        console.log("Fetched data in component:", data);
       } catch (error) {
         console.error("Error in component:", error.message);
       }

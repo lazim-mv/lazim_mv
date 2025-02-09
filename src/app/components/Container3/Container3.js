@@ -26,11 +26,8 @@ const Container3 = () => {
   const nextImage = () => {
     if (currentIndex < clicks) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
-      console.log("clicked1");
-      console.log(currentIndex);
     } else {
       setCurrentIndex(0);
-      console.log("clicked2");
     }
   };
 
@@ -46,7 +43,6 @@ const Container3 = () => {
     setActiveIndex(index === activeIndex ? null : index);
   };
 
-  console.log(activeIndex);
   return (
     <div className={styles.container}>
       <div className={styles.title}>

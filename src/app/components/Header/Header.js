@@ -31,7 +31,6 @@ function Header() {
     link.click();
   };
 
-  console.log(pathname, "path");
 
   const lenis = useLenis(({ scroll }) => {});
 

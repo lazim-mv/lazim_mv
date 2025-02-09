@@ -10,7 +10,6 @@ const TextStagger = ({ children }) => {
     gsap.registerPlugin(ScrollTrigger);
     let mySplitTExt = new SplitType(".split", { type: "chars" });
     let chars = mySplitTExt.chars;
-    console.log(chars, "chars");
 
     gsap.from(chars, {
       yPercent: 130,

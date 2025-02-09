@@ -18,12 +18,9 @@ const Container6 = () => {
   const cardRefs = useRef([]);
   useEffect(() => {
     cardRefs.current.forEach((ref) => {
-      console.log(ref, "ios");
       if (ref && ios) {
-        console.log(ref, "ios");
         ref.classList.add("iosDeviceClass");
       } else if (ref && !ios) {
-        console.log(ref, "iosss");
         ref.classList.add("android");
       }
     });

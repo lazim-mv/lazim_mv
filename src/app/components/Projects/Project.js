@@ -25,7 +25,6 @@ const Project = () => {
     }
   }, [windowSize]);
 
-  console.log(windowSize, "windwo");
 
   const projectData = [
     {
@@ -80,13 +79,11 @@ const Project = () => {
 
   const handleFullView = (index) => {
     setClickedIndex(index);
-    console.log("Clicked");
   };
 
   const handleClose = (e) => {
     e.stopPropagation();
     setClickedIndex(null);
-    console.log("Closed");
   };
 
   const handleMouseMove = (e) => {
